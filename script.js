@@ -39,9 +39,17 @@ class GaugeManager {
 
 // Create and initialize gauges
 const gaugeManager = new GaugeManager();
-gaugeManager.addDial({ name: 'power', id: 'powerGauge', max: 574, value: 75 });
-gaugeManager.addDial({ name: 'bob', id: 'bobGauge', max: 253, value: 50 });
-gaugeManager.addDial({ name: 'strength', id: 'strengthGauge', max: 491, value: 98 });
+
+// Initialize Gauges
+gaugeManager.addDial({ name: 'power', id: 'powerGauge', dialStartAngle: 135, dialEndAngle: 45, max: 574, value: 75 });
+gaugeManager.addDial({ name: 'strength', id: 'strengthGauge', dialStartAngle: 135, dialEndAngle: 45, max: 491, value: 98 });
+gaugeManager.addDial({ name: 'bob', id: 'bobGauge', dialStartAngle: 135, dialEndAngle: 45, max: 253, value: 50 });
+
+// Example: Dynamically update the power gauge
+setTimeout(() => {
+  gaugeManager.updateDial('power', 300);
+}, 3000);
+
 
 // Listen for messages from Ignition
 window.addEventListener('message', (event) => {
