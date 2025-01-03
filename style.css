@@ -1,0 +1,262 @@
+/* ------ Default Style ---------- */
+
+.gauge-container {
+    font-family: 'Open Sans', sans-serif;
+    width: 250px;
+    height: 250px;
+    display: block;
+    padding: 10px;
+    background-color: #222;
+    margin: 7px;
+    border-radius: 3px;
+    position: relative;
+    /* only usef
+for demo here*/
+    float: left;
+  }
+
+  .gauge-container>.label {
+    position: relative;
+    display: block;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 0.8em;
+    width: auto;
+    text-align: center;
+    color: white;
+  }
+
+  .gauge-container>.gauge>.dial {
+    stroke: transparent;
+    stroke-width: 5;
+    transform: scale(0.9, 0.9) translate3d(5.5px, 5.5px, 0);
+    fill: rgba(11, 60, 73, 0.42);
+  }
+
+  .gauge-container>.gauge>.value {
+    stroke: rgba(194, 255, 23, 1);
+    stroke-width: 5;
+    stroke-dasharray: 3.6 1;
+    fill: rgba(0, 0, 0, 0);
+  }
+
+  .gauge-container>.main-data>.value-text {
+    font-weight: 100;
+    font-size: 70%;
+    position: absolute;
+    bottom: 37.4%;
+    left: 50%;
+    display: inline-block;
+  }
+
+  .gauge-container>.gauge>.value-text {
+        font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 0.67em;
+  color: grey;
+  transform: translate3d(-18.5%, 6%, 0);
+  }
+
+  /* --------- Main Data ------------ */
+
+  .main-data {
+    color: white;
+    bottom: 40%;
+    left: 30%;
+    display: block;
+    width: 100%;
+  }
+
+  .main-data svg.svg-content {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    height: 50%;
+    width: auto;
+    z-index: 200;
+  }
+
+  .complete-text {
+    font-size: 40%;
+    display: inline-block;
+    position: absolute;
+    top: 34%;
+    left: 52%;
+    text-transform: uppercase;
+    opacity: 0.7;
+    letter-spacing: 0.6px;
+    z-index: 20;
+  }
+
+  .line-bg {
+    stroke: rgba(203, 210, 208, 0.2);
+    stroke-width: 20;
+    stroke-dasharray: 13.5, 1.5;
+  }
+
+  .line-value {
+    stroke: rgba(194, 255, 23, 1);
+    stroke-width: 20;
+    stroke-dasharray: 13.5, 1.5;
+  }
+
+  .user-output-text {
+    position: absolute;
+    bottom: 49%;
+    left: 27.5%;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 100;
+    font-size: 50%;
+  }
+
+  .exOutput {
+  position: absolute;
+  bottom: 61%;
+  left: 34.5%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 130%;
+  }
+
+  .user-output-best-text {
+    position: absolute;
+    bottom: 30%;
+    left: 27.5%;
+    display: inline-block;
+    font-weight: 100;
+    font-size: 40%;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    width: 20%;
+    line-height: 110%;
+  }
+
+  .exOutputBest {
+    position: absolute;
+    bottom: 29%;
+    left: 47%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 80%;
+  }
+
+  .power-output {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    height: 10%;
+    width: 10%;
+  }
+
+  /* --------- Extra Data ------------ */
+
+  .extra-data {
+    bottom: 10%;
+    left: 30%;
+    width: 43%;
+    z-index: 340;
+    margin: auto 0;
+    position: absolute;
+  }
+
+  .extra-data>.trophy {
+    color: rgba(203, 210, 208, 0.2);
+    font-size: 110%;
+    display: inline;
+    position: relative;
+    top: -25px;
+    left: -5px;
+  }
+
+  .extra-data>.trophy-text {
+    color: white;
+    font-size: 50%;
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 3.3px;
+    text-transform: uppercase;
+    display: flex;
+    position: absolute;
+    opacity: 0.5;
+    left: 20%;
+    bottom: 106%;
+    flex-wrap: wrap;
+    width: min-content;
+  }
+
+  .extra-data>.trophy-text .trophy-t2 {
+    font-size: 200%;
+    letter-spacing: 2px;
+    line-height: 90%;
+  }
+
+  .exOutputBestPersonal {
+    bottom: 88%;
+    left: 70%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 80%;
+    position: absolute;
+  }
+
+  /* custom theming */
+
+  .exOutput {
+    color: rgba(203, 210, 208, 1);
+  }
+  .gauge-container>.gauge>.value-text {
+    fill: rgba(194, 255, 23, 1);
+  }
+  .gauge-container>.main-data>.value-text,
+  
+  .exOutputBest,
+  .exOutputBestPersonal {
+    color: rgba(194, 255, 23, 1);
+  }
+
+
+  /* activated actions */
+
+  .achieved-trophy {
+    color: rgba(232, 226, 136, 1);
+  }
+
+  .svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .eMO-1 {
+    fill: url(#linear-gradient);
+  }
+
+  .eMO-2 {
+    fill: url(#linear-gradient-2);
+  }
+
+  .eMO-3 {
+    fill: url(#linear-gradient-3);
+  }
+
+  .eMO-4 {
+    fill: url(#linear-gradient-4);
+  }
+
+  .eMO-5 {
+    fill: url(#linear-gradient-5);
+  }
+
+ /* inactivated actions */
+
+  #Layer_1 path,
+  #powerCompletePerc line {
+    fill: black;
+  stroke: black;
+  }
+  .complete-text,
+  .exOutput {
+    color: black;
+    opacity: 1;
+  }
