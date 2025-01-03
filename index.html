@@ -1,184 +1,53 @@
-<div id="powerGauge" class="gauge-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gauge Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Add the gauge-container and related styles here */
+    .gauge-container {
+      font-family: 'Open Sans', sans-serif;
+      width: 250px;
+      height: 250px;
+      display: block;
+      padding: 10px;
+      background-color: #222;
+      margin: 7px;
+      border-radius: 3px;
+      position: relative;
+      color: white;
+    }
+    .label {
+      text-align: center;
+      font-size: 18px;
+    }
+    .line-value {
+      stroke: rgba(194, 255, 23, 1);
+      stroke-width: 10;
+    }
+    .line-bg {
+      stroke: rgba(203, 210, 208, 0.2);
+      stroke-width: 10;
+    }
+  </style>
+</head>
+<body>
+  <div id="powerGauge" class="gauge-container">
     <span class="label">Power</span>
     <div class="main-data">
       <svg version="1.1" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" class="svg-content" id="powerCompletePerc">
-
-        <line id="powerPercComp" x1="10" y1="10" x2="180" y2="10" class="line-value" />
-        <line x1="10" y1="10" x2="180" y2="10" class="line-bg" />
+        <line id="powerPercComp" x1="10" y1="10" x2="180" y2="10" class="line-value"></line>
+        <line x1="10" y1="10" x2="180" y2="10" class="line-bg"></line>
       </svg>
-      <span class="complete-text">User Output</span>
-
-      <span class="user-output-text">Complete</span>
-      <span class="exOutput">367</span>
-      <span class="value-text">%</span>
-
-      <span class="user-output-best-text">Highest Output</span>
-      <span class="exOutputBest">+249</span>
-
     </div>
-
-    <div class="extra-data">
-
-      <span class="trophy">
-        <i class="fas fa-trophy achieved-trophy"></i>
-      </span>
-      <span class="trophy-text">
-        <span class="trophy-t1">Personal</span>
-        <span class="trophy-t2">Best</span>
-      </span>
-      <span class="exOutputBestPersonal">+91</span>
-
-    </div>
-
-    <div class="power-output">
-      <svg id="Layer_1" data-name="Layer 1" preserveAspectRatio="xMinYMin meet" viewBox="0 0 12 13.87">
-        <defs>
-          <linearGradient id="linear-gradient" x1="10.5" y1="14.44" x2="10.5" y2="-0.56" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#ff8360" />
-            <stop offset="0.02" stop-color="#fe8762" />
-            <stop offset="0.24" stop-color="#f2b876" />
-            <stop offset="0.41" stop-color="#ebd783" />
-            <stop offset="0.5" stop-color="#e8e288" />
-            <stop offset="0.58" stop-color="#e5e47f" />
-            <stop offset="0.7" stop-color="#ddea67" />
-            <stop offset="0.86" stop-color="#d0f540" />
-            <stop offset="0.99" stop-color="#c2ff17" />
-          </linearGradient>
-          <linearGradient id="linear-gradient-2" x1="9.94" y1="14.44" x2="9.94" y2="-0.56" xlink:href="#linear-gradient" />
-          <linearGradient id="linear-gradient-3" x1="9" y1="14.44" x2="9" y2="-0.56" xlink:href="#linear-gradient" />
-          <linearGradient id="linear-gradient-4" x1="7.69" y1="14.44" x2="7.69" y2="-0.56" xlink:href="#linear-gradient" />
-          <linearGradient id="linear-gradient-5" x1="6" y1="14.44" x2="6" y2="-0.56" xlink:href="#linear-gradient" />
-        </defs>
-
-        <path id="_1" data-name="1" class="eMO-1" d="M11.72,12H9.28a.27.27,0,0,0-.28.28v1.31a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08h2.44a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2V12.28a.27.27,0,0,0-.28-.28Z"
-        />
-        <path id="_2" data-name="2" class="eMO-2" d="M12,9.28A.27.27,0,0,0,11.72,9H8.16a.28.28,0,0,0-.2.08.26.26,0,0,0-.08.2v1.31a.27.27,0,0,0,.28.28h3.56a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-        />
-        <path id="_3" data-name="3" class="eMO-3" d="M12,6.28A.27.27,0,0,0,11.72,6H6.28A.27.27,0,0,0,6,6.28V7.59a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08h5.44a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-        />
-        <path id="_4" data-name="4" class="eMO-4" d="M12,3.28A.27.27,0,0,0,11.72,3H3.66a.28.28,0,0,0-.2.08.26.26,0,0,0-.08.2V4.59a.27.27,0,0,0,.28.28h8.06a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-        />
-        <path id="_5" data-name="5" class="eMO-5" d="M11.72,0H.28a.3.3,0,0,0-.2.08A.3.3,0,0,0,0,.28V1.59a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08H11.72a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2V.28a.3.3,0,0,0-.08-.2A.3.3,0,0,0,11.72,0Z"
-        />
-      </svg>
-
-    </div>
-
   </div>
 
-  <div id="strengthGauge" class="gauge-container">
-    <span class="label">Strength</span>
-    <div class="main-data">
-      <span class="complete-text">Complete</span>
-      <svg version="1.1" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" class="svg-content">
-        <line id="strengthPercComp" x1="10" y1="10" x2="190" y2="10" class="line-value" />
-        <line x1="10" y1="10" x2="190" y2="10" class="line-bg" />
-      </svg>
-
-      <span class="user-output-text">User Output</span>
-      <span class="exOutput">582</span>
-      <span class="value-text">KW/h</span>
-
-      <span class="user-output-best-text">Highest Output</span>
-      <span class="exOutputBest">+249</span>
-
-      <div class="power-output">
-        <svg id="Layer_1" data-name="Layer 1" preserveAspectRatio="xMinYMin meet" viewBox="0 0 12 13.87">
-          <path id="_1" data-name="1" class="eMO-1" d="M11.72,12H9.28a.27.27,0,0,0-.28.28v1.31a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08h2.44a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2V12.28a.27.27,0,0,0-.28-.28Z"
-          />
-          <path id="_2" data-name="2" class="eMO-2" d="M12,9.28A.27.27,0,0,0,11.72,9H8.16a.28.28,0,0,0-.2.08.26.26,0,0,0-.08.2v1.31a.27.27,0,0,0,.28.28h3.56a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-          />
-          <path id="_3" data-name="3" class="eMO-3" d="M12,6.28A.27.27,0,0,0,11.72,6H6.28A.27.27,0,0,0,6,6.28V7.59a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08h5.44a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-          />
-          <path id="_4" data-name="4" class="eMO-4" d="M12,3.28A.27.27,0,0,0,11.72,3H3.66a.28.28,0,0,0-.2.08.26.26,0,0,0-.08.2V4.59a.27.27,0,0,0,.28.28h8.06a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-          />
-          <path id="_5" data-name="5" class="eMO-5" d="M11.72,0H.28a.3.3,0,0,0-.2.08A.3.3,0,0,0,0,.28V1.59a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08H11.72a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2V.28a.3.3,0,0,0-.08-.2A.3.3,0,0,0,11.72,0Z"
-          />
-        </svg>
-
-      </div>
-
-    </div>
-
-    <div class="extra-data">
-
-      <span class="trophy">
-        <i class="fas fa-trophy achievedNOT-trophy"></i>
-      </span>
-      <span class="trophy-text">
-        <span class="trophy-t1">Personal</span>
-        <span class="trophy-t2">Best</span>
-      </span>
-      <span class="exOutputBestPersonal">+91</span>
-
-    </div>
-
-  </div>
-
-<div id="bobGauge" class="gauge-container">
-    <span class="label">Bob</span>
-    <div class="main-data">
-      <svg version="1.1" viewBox="0 0 200 200" preserveAspectRatio="xMinYMin meet" class="svg-content" id="powerCompletePerc">
-
-        <line id="bobPercComp" x1="10" y1="10" x2="190" y2="10" class="line-value" />
-        <line x1="10" y1="10" x2="190" y2="10" class="line-bg" />
-      </svg>
-      <span class="complete-text">Complete</span>
-
-      <span class="user-output-text">User Output</span>
-      <span class="exOutput">582</span>
-      <span class="value-text">KW/h</span>
-
-      <span class="user-output-best-text">Highest Output</span>
-      <span class="exOutputBest">+249</span>
-
-    </div>
-
-    <div class="extra-data">
-
-      <span class="trophy">
-        <i class="fas fa-trophy achieved-trophy"></i>
-      </span>
-      <span class="trophy-text">
-        <span class="trophy-t1">Personal</span>
-        <span class="trophy-t2">Best</span>
-      </span>
-      <span class="exOutputBestPersonal">+91</span>
-
-    </div>
-
-    <div class="power-output">
-      <svg id="Layer_1" data-name="Layer 1" preserveAspectRatio="xMinYMin meet" viewBox="0 0 12 13.87">
-        <defs>
-          <linearGradient id="linear-gradient" x1="10.5" y1="14.44" x2="10.5" y2="-0.56" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#ff8360" />
-            <stop offset="0.02" stop-color="#fe8762" />
-            <stop offset="0.24" stop-color="#f2b876" />
-            <stop offset="0.41" stop-color="#ebd783" />
-            <stop offset="0.5" stop-color="#e8e288" />
-            <stop offset="0.58" stop-color="#e5e47f" />
-            <stop offset="0.7" stop-color="#ddea67" />
-            <stop offset="0.86" stop-color="#d0f540" />
-            <stop offset="0.99" stop-color="#c2ff17" />
-          </linearGradient>
-          <linearGradient id="linear-gradient-2" x1="9.94" y1="14.44" x2="9.94" y2="-0.56" xlink:href="#linear-gradient" />
-          <linearGradient id="linear-gradient-3" x1="9" y1="14.44" x2="9" y2="-0.56" xlink:href="#linear-gradient" />
-          <linearGradient id="linear-gradient-4" x1="7.69" y1="14.44" x2="7.69" y2="-0.56" xlink:href="#linear-gradient" />
-          <linearGradient id="linear-gradient-5" x1="6" y1="14.44" x2="6" y2="-0.56" xlink:href="#linear-gradient" />
-        </defs>
-
-        <path id="_1" data-name="1" class="eMO-1" d="M11.72,12H9.28a.27.27,0,0,0-.28.28v1.31a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08h2.44a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2V12.28a.27.27,0,0,0-.28-.28Z"
-        />
-        <path id="_2" data-name="2" class="eMO-2" d="M12,9.28A.27.27,0,0,0,11.72,9H8.16a.28.28,0,0,0-.2.08.26.26,0,0,0-.08.2v1.31a.27.27,0,0,0,.28.28h3.56a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-        />
-        <path id="_3" data-name="3" class="eMO-3" d="M12,6.28A.27.27,0,0,0,11.72,6H6.28A.27.27,0,0,0,6,6.28V7.59a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08h5.44a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-        />
-        <path id="_4" data-name="4" class="eMO-4" d="M12,3.28A.27.27,0,0,0,11.72,3H3.66a.28.28,0,0,0-.2.08.26.26,0,0,0-.08.2V4.59a.27.27,0,0,0,.28.28h8.06a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2Z"
-        />
-        <path id="_5" data-name="5" class="eMO-5" d="M11.72,0H.28a.3.3,0,0,0-.2.08A.3.3,0,0,0,0,.28V1.59a.28.28,0,0,0,.08.2.26.26,0,0,0,.2.08H11.72a.26.26,0,0,0,.2-.08.28.28,0,0,0,.08-.2V.28a.3.3,0,0,0-.08-.2A.3.3,0,0,0,11.72,0Z"
-        />
-      </svg>
-
-    </div>
-
-  </div>
+  <script>
+    // Add JavaScript for animations or gauge interactions here
+    const lineValue = document.getElementById('powerPercComp');
+    lineValue.setAttribute('x2', 100); // Example to shorten the line dynamically
+  </script>
+</body>
+</html>
